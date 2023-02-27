@@ -9,7 +9,7 @@ function getRandomHexColor() {
 }
 
 btnStart.addEventListener('click', () => {
-  btnStart.disabled = true;
+  isDisabledBtnStop();
   btnStop.disabled = false;
 
   timerId = setInterval(() => {
@@ -20,5 +20,14 @@ btnStart.addEventListener('click', () => {
 btnStop.addEventListener('click', () => {
   clearInterval(timerId);
   btnStart.disabled = false;
-  btnStop.disabled = true;
+  isDisabledBtnStop();
 });
+
+function isDisabledBtnStop() {
+  btnStop.disabled = true;
+};
+
+
+
+
+
